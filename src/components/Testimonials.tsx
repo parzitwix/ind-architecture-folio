@@ -6,51 +6,51 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Marie & Pierre Dubois",
-      project: "Maison individuelle, Colomiers",
+      name: "Philippe Lacroix",
+      project: "Maison individuelle, Saint-Romain",
       rating: 5,
-      text: "Un accompagnement exceptionnel du début à la fin. L'architecte a su comprendre nos besoins et nous proposer des solutions créatives. Le suivi de chantier était irréprochable.",
-      date: "Mars 2024"
-    },
-    {
-      id: 2, 
-      name: "Sophie Leroux",
-      project: "Extension maison, Muret", 
-      rating: 5,
-      text: "Très professionnelle, à l'écoute et de bon conseil. L'extension s'intègre parfaitement à l'existant. Respect des délais et du budget. Je recommande vivement !",
-      date: "Janvier 2024"
-    },
-    {
-      id: 3,
-      name: "Jean-Luc Martin", 
-      project: "Rénovation complète, Toulouse",
-      rating: 5,
-      text: "Excellent travail de rénovation. L'architecte a transformé notre ancienne maison en un espace moderne et fonctionnel. Communication parfaite tout au long du projet.",
+      text: "Excellent architecte, très professionnel et à l'écoute de nos besoins. Le projet a été livré dans les temps et selon nos attentes. Je recommande vivement.",
       date: "Novembre 2023"
     },
     {
-      id: 4,
-      name: "Entreprise Techno Solutions",
-      project: "Bureaux commerciaux, Blagnac",
-      rating: 5, 
-      text: "Conception intelligente de nos nouveaux bureaux. Optimisation de l'espace, respect des normes, suivi rigoureux. Un partenaire de confiance pour nos futurs projets.",
+      id: 2, 
+      name: "Marie Dubois",
+      project: "Extension maison, La Tour-de-Salvagny", 
+      rating: 5,
+      text: "Très satisfaite du travail réalisé. L'architecte a su comprendre nos contraintes et proposer des solutions créatives. Suivi de chantier impeccable.",
       date: "Septembre 2023"
     },
     {
-      id: 5,
-      name: "Famille Roussel",
-      project: "Maison contemporaine, Tournefeuille",
+      id: 3,
+      name: "Jean-Claude Martin", 
+      project: "Rénovation complète, Lyon",
       rating: 5,
-      text: "Notre maison de rêve est devenue réalité grâce à ce professionnel. Plans détaillés, conseils précieux, disponibilité permanente. Un grand merci !",
-      date: "Juin 2023"
+      text: "Professionnel compétent et disponible. La rénovation s'est déroulée sans encombre grâce à sa rigueur et son expertise. Résultat final parfait.",
+      date: "Juillet 2023"
+    },
+    {
+      id: 4,
+      name: "Entreprise Bâti Solutions",
+      project: "Projet industriel, Gleizé",
+      rating: 5, 
+      text: "Partenaire de confiance pour nos projets industriels. Maîtrise technique excellente et respect des délais. Nous recommandons sans hésitation.",
+      date: "Mai 2023"
+    },
+    {
+      id: 5,
+      name: "Famille Rousseau",
+      project: "Maison contemporaine, Collonges",
+      rating: 5,
+      text: "Un grand merci pour la réalisation de notre maison. Plans détaillés, conseils pertinents et suivi personnalisé. Exactement ce que nous attendions.",
+      date: "Mars 2023"
     },
     {
       id: 6,
-      name: "Catherine & Michel Torres",
-      project: "Surélévation, Saint-Orens",
+      name: "Sophie & Michel Berger",
+      project: "Extension et surélévation",
       rating: 5,
-      text: "Projet de surélévation mené avec brio. Respect de l'architecture existante, optimisation de la lumière naturelle. Résultat au-delà de nos espérances.",
-      date: "Avril 2023"
+      text: "Projet mené avec professionnalisme. L'architecte a su optimiser l'espace tout en respectant l'architecture existante. Très satisfaits du résultat.",
+      date: "Janvier 2023"
     }
   ];
 
@@ -121,13 +121,13 @@ const Testimonials = () => {
             </div>
             
             <div className="text-center space-y-2">
-              <div className="text-3xl font-light text-accent-brand">100%</div>
+              <div className="text-3xl font-light text-accent-brand">97%</div>
               <div className="text-sm text-muted-foreground">Projets livrés dans les délais</div>
             </div>
             
             <div className="text-center space-y-2">
-              <div className="text-3xl font-light text-accent-brand">95%</div>
-              <div className="text-sm text-muted-foreground">Clients recommandent nos services</div>
+              <div className="text-3xl font-light text-accent-brand">100%</div>
+              <div className="text-sm text-muted-foreground">Satisfaction clients</div>
             </div>
           </div>
 

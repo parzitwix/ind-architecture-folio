@@ -19,58 +19,58 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Résidence Les Jardins",
+      title: "Habitat Collectif - Promotion Immobilière",
       category: "Résidentiel",
-      location: "Toulouse",
-      year: "2023",
-      description: "Conception d'un ensemble résidentiel moderne de 12 logements avec commerces au rez-de-chaussée. Architecture contemporaine intégrant des espaces verts et terrasses privatives.",
+      location: "Gleizé (69)",
+      year: "2014",
+      description: "Conception d'un ensemble résidentiel moderne intégrant des logements contemporains avec commerces au rez-de-chaussée. Architecture contemporaine avec espaces verts et terrasses privatives.",
       image: projet1,
-      surface: "1,200 m²",
+      surface: "1,260 m²",
       type: "Construction neuve"
     },
     {
       id: 2,
-      title: "Complexe Industriel Aéronautique",
+      title: "Construction Complexe Industriel",
       category: "Industriel", 
-      location: "Blagnac",
-      year: "2022",
-      description: "Maîtrise d'œuvre complète pour un complexe industriel dédié à l'aéronautique. Bâtiments techniques, bureaux et zones de stockage optimisés pour l'activité.",
+      location: "Konya, Turquie",
+      year: "2010-2011",
+      description: "Construction d'un complexe laiterie et abattoir. Maîtrise d'œuvre complète pour ce projet industriel d'envergure intégrant bâtiments techniques, bureaux et zones de production optimisés.",
       image: projet2,
-      surface: "8,500 m²",
+      surface: "70,500 m²",
       type: "Construction neuve"
     },
     {
       id: 3,
-      title: "Villa Contemporaine",
+      title: "Maison Contemporaine",
       category: "Résidentiel",
-      location: "Colomiers", 
-      year: "2023",
-      description: "Maison individuelle contemporaine sur terrain en pente. Intégration parfaite dans l'environnement avec bardage bois et grandes ouvertures sur le paysage.",
+      location: "Saint-Romain-au-Mont-d'Or (69)",
+      year: "2020",
+      description: "Maison individuelle contemporaine privée sur terrain en pente. Intégration parfaite dans l'environnement avec bardage bois et grandes ouvertures sur le paysage.",
       image: projet3,
       surface: "180 m²",
       type: "Construction neuve"
     },
     {
       id: 4,
-      title: "Extension Familiale",
+      title: "Rénovation et Extension",
       category: "Rénovation",
-      location: "Muret",
-      year: "2023", 
-      description: "Extension et rénovation complète d'une maison des années 80. Création d'un espace de vie ouvert avec grandes baies vitrées donnant sur le jardin.",
+      location: "La Tour-de-Salvagny (69)",
+      year: "2019", 
+      description: "Extension et rénovation complète d'une maison existante. Création d'un espace de vie ouvert avec grandes baies vitrées donnant sur le jardin et optimisation des espaces.",
       image: projet4,
-      surface: "50 m² (extension)",
+      surface: "97 m²",
       type: "Rénovation/Extension"
     },
     {
       id: 5,
-      title: "Centre de Formation",
+      title: "Construction Centre Multiusage",
       category: "Commercial",
-      location: "Toulouse",
-      year: "2022",
-      description: "Reconversion d'un site industriel en centre de formation moderne. Architecture innovante avec espaces modulables et technologies intégrées.",
+      location: "Lyon",
+      year: "2017",
+      description: "Construction d'un centre multiusage moderne. Architecture innovante avec espaces modulables, technologies intégrées et optimisation des flux de circulation.",
       image: projet5,
-      surface: "3,200 m²",
-      type: "Réhabilitation"
+      surface: "5,200 m²",
+      type: "Construction neuve"
     }
   ];
 

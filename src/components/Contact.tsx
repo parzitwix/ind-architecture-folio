@@ -52,25 +52,25 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Téléphone",
-      value: "+33 5 61 XX XX XX",
-      link: "tel:+33561XXXXXX"
+      value: "06 50 04 99 37",
+      link: "tel:+33650049937"
     },
     {
       icon: Mail,
-      label: "Email",
+      label: "Email professionnel",
       value: "contact@ind-architecture.fr",
       link: "mailto:contact@ind-architecture.fr"
     },
     {
       icon: MapPin,
       label: "Adresse",
-      value: "Toulouse, Haute-Garonne",
+      value: "Saint-Romain-au-Mont-d'Or, Lyon (69)",
       link: null
     },
     {
       icon: Clock,
       label: "Horaires",
-      value: "Lun-Ven : 9h-18h",
+      value: "Lun-Ven : 8h-18h",
       link: null
     }
   ];
@@ -220,36 +220,30 @@ const Contact = () => {
                     <div className="text-center space-y-2">
                       <MapPin size={24} className="text-muted-foreground mx-auto" />
                       <p className="text-sm text-muted-foreground">
-                        Toulouse et agglomération<br />
-                        Haute-Garonne (31)
+                        Lyon et région Rhône-Alpes<br />
+                        Projets internationaux acceptés
                       </p>
                     </div>
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    Intervention principalement sur Toulouse métropole. 
-                    Déplacements possibles dans toute la Haute-Garonne selon le projet.
+                  <div className="text-center">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      asChild
+                    >
+                      <a 
+                        href="https://www.google.com/maps/place/le+15/@45.7542403,4.7564142,13z/data=!3m1!5s0x47f4ea4d508f79ab:0x8b77bae220f94b01!4m10!1m2!2m1!1sLe+15+!3m6!1s0x47f4eb1f9762db8f:0xa25b8e9ecfccb428!8m2!3d45.7542403!4d4.828512!15sCgVMZSAxNZIBG2Fzc29jaWF0aW9uX29yX29yZ2FuaXphdGlvbqoBORABKgkiBWxlIDE1KAQyHxABIhu2i4HePxHTI9i3gtEDbCdAY2cherCmU8bvegcyCRACIgVsZSAxNeABAA!16s%2Fg%2F11j8j_ydbl"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Voir sur Google Maps
+                      </a>
+                    </Button>
+                  </div>
+                  <p className="text-xs text-muted-foreground text-center">
+                    Intervention principalement sur Lyon métropole et région Rhône-Alpes. 
+                    Déplacements possibles selon le projet.
                   </p>
-                </div>
-              </Card>
-
-              {/* Quick Contact */}
-              <Card className="p-6 border-border bg-accent-brand/5">
-                <div className="space-y-4">
-                  <h4 className="font-medium">Rendez-vous urgent ?</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Pour un projet urgent ou une demande spécifique, 
-                    contactez-nous directement par téléphone.
-                  </p>
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-accent-brand text-accent-brand hover:bg-accent-brand hover:text-accent-brand-foreground"
-                    asChild
-                  >
-                    <a href="tel:+33561XXXXXX">
-                      <Phone size={16} className="mr-2" />
-                      Appeler maintenant
-                    </a>
-                  </Button>
                 </div>
               </Card>
             </div>
