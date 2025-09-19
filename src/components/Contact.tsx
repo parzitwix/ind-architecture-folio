@@ -64,7 +64,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Adresse",
-      value: "Saint-Romain-au-Mont-d'Or, Lyon (69)",
+      value: "16 bis rue du charroi, Saint-Romain-au-Mont-d'Or 69270",
       link: null
     },
     {

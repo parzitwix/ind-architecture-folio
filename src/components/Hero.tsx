@@ -1,20 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { useState } from 'react';
 import maisonModerne from '@/assets/maison-moderne.jpg';
-import maisonCroquis from '@/assets/maison-croquis.jpeg';
 
 const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setMousePosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
-    });
-  };
 
   return (
     <section id="accueil" className="min-h-screen relative overflow-hidden">
@@ -26,31 +14,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Magnifying glass effect */}
-      {isHovering && (
-        <div 
-          className="absolute w-48 h-48 rounded-full border-4 border-white shadow-2xl pointer-events-none z-20 overflow-hidden"
-          style={{
-            left: mousePosition.x - 96,
-            top: mousePosition.y - 96,
-            transform: 'translate3d(0, 0, 0)',
-            background: `url(${maisonCroquis}) no-repeat`,
-            backgroundSize: 'cover',
-            backgroundPosition: `${-(mousePosition.x * 2 - 96)}px ${-(mousePosition.y * 2 - 96)}px`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent"></div>
-        </div>
-      )}
-
       {/* Content */}
-      <div 
-        className="relative z-10 min-h-screen flex items-center"
-        onMouseMove={handleMouseMove}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >
+      <div className="relative z-10 min-h-screen flex items-center">
         <div className="container mx-auto container-padding">
           <div className="max-w-4xl">
             <div className="space-y-8">
@@ -82,7 +47,7 @@ const Hero = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-bounce"
+                  className="bg-white text-black border-white hover:bg-white hover:text-black"
                   asChild
                 >
                   <a href="#realisations">Voir nos réalisations</a>
