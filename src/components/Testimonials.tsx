@@ -126,8 +126,8 @@ const Testimonials = () => {
             </div>
             
             <div className="text-center space-y-2">
-              <div className="text-3xl font-light text-accent-brand">100%</div>
-              <div className="text-sm text-muted-foreground">Satisfaction clients</div>
+              <div className="text-3xl font-light text-accent-brand">25+</div>
+              <div className="text-sm text-muted-foreground">Années d'expérience</div>
             </div>
           </div>
 

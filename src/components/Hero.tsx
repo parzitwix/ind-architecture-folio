@@ -15,7 +15,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex items-center">
+      <div className="relative z-10 min-h-screen flex items-center pt-32">
         <div className="container mx-auto container-padding">
           <div className="max-w-4xl">
             <div className="space-y-8">
