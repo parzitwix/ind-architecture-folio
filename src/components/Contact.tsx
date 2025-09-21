@@ -81,7 +81,7 @@ const Contact = () => {
         <div className="space-y-12">
           {/* Header */}
           <div className="text-center space-y-6">
-            <Badge variant="outline" className="w-fit">Contact</Badge>
+            
             <h2 className="text-3xl md:text-4xl font-light text-balance">
               Démarrons votre projet
               <span className="block font-medium">ensemble</span>

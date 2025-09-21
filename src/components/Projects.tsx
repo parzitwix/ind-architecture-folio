@@ -84,7 +84,7 @@ const Projects = () => {
         <div className="space-y-12">
           {/* Header */}
           <div className="text-center space-y-6">
-            <Badge variant="outline" className="w-fit">Nos réalisations</Badge>
+            
             <h2 className="text-3xl md:text-4xl font-light text-balance">
               Projets réalisés avec 
               <span className="block font-medium">expertise et passion</span>

@@ -33,7 +33,7 @@ const About = () => {
         <div className="space-y-16">
           {/* Header */}
           <div className="text-center space-y-6">
-            <Badge variant="outline" className="w-fit">À propos</Badge>
+            
             <h2 className="text-3xl md:text-4xl font-light text-balance">
               Architecture franche, contemporaine
               <span className="block font-medium">fonctionnelle & responsable</span>
