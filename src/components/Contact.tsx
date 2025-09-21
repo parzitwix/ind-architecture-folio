@@ -20,32 +20,78 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    subject: '',
-    message: ''
+    project_type: '',
+    message: '',
+    consent: false
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    setFormData(prev => ({ 
+      ...prev, 
+      [name]: type === 'checkbox' ? checked : value 
+    }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulation d'envoi
-    toast({
-      title: "Message envoyé !",
-      description: "Nous vous recontacterons dans les plus brefs délais.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    });
+    if (!formData.consent) {
+      setFormStatus('Veuillez accepter la politique de confidentialité.');
+      return;
+    }
+
+    // Check honeypot
+    const honeypot = (document.querySelector('input[name="_gotcha"]') as HTMLInputElement)?.value;
+    if (honeypot) return;
+
+    setIsSubmitting(true);
+    setFormStatus('Envoi en cours…');
+
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('phone', formData.phone);
+    formDataToSend.append('project_type', formData.project_type);
+    formDataToSend.append('message', formData.message);
+    formDataToSend.append('_subject', 'Nouvelle demande via le site IND Architecture');
+    formDataToSend.append('_language', 'fr');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xwprevpj', {
+        method: 'POST',
+        body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setFormStatus('Merci, votre message a bien été envoyé.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          project_type: '',
+          message: '',
+          consent: false
+        });
+        toast({
+          title: "Message envoyé !",
+          description: "Nous vous recontacterons dans les plus brefs délais.",
+        });
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        setFormStatus(errorData?.errors?.[0]?.message || 'Oups, une erreur est survenue. Réessayez plus tard.');
+      }
+    } catch (error) {
+      setFormStatus('Impossible d\'envoyer le message (problème de réseau).');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -112,6 +158,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="Votre nom"
+                      autoComplete="name"
                       required
                     />
                   </div>
@@ -124,6 +171,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="votre@email.com"
+                      autoComplete="email"
                       required
                     />
                   </div>
@@ -139,14 +187,15 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="06 XX XX XX XX"
+                      autoComplete="tel"
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Type de projet *</Label>
+                    <Label htmlFor="project_type">Type de projet *</Label>
                     <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
+                      id="project_type"
+                      name="project_type"
+                      value={formData.project_type}
                       onChange={handleInputChange}
                       placeholder="Construction, Rénovation, Extension..."
                       required
@@ -167,13 +216,56 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* RGPD Consent */}
+                <div className="flex items-start gap-3">
+                  <input
+                    id="consent"
+                    name="consent"
+                    type="checkbox"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
+                    className="mt-1"
+                    required
+                  />
+                  <Label htmlFor="consent" className="text-sm leading-relaxed cursor-pointer">
+                    J'accepte que mes informations soient utilisées pour me recontacter, conformément à la{" "}
+                    <a 
+                      href="/politique-confidentialite" 
+                      target="_blank" 
+                      rel="noopener"
+                      className="text-accent-brand hover:underline"
+                    >
+                      Politique de confidentialité
+                    </a>.
+                  </Label>
+                </div>
+
+                {/* Hidden fields */}
+                <input type="hidden" name="_subject" value="Nouvelle demande via le site IND Architecture" />
+                <input type="hidden" name="_language" value="fr" />
+                {/* Honeypot anti-spam */}
+                <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
                 <Button 
                   type="submit" 
+                  disabled={isSubmitting}
                   className="w-full bg-accent-brand hover:bg-accent-brand/90 text-accent-brand-foreground transition-bounce group"
                 >
                   <Send size={18} className="mr-2 group-hover:translate-x-1 transition-smooth" />
-                  Envoyer le message
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                 </Button>
+
+                {/* Form Status */}
+                {formStatus && (
+                  <p 
+                    className={`text-sm text-center ${
+                      formStatus.includes('Merci') ? 'text-green-600' : 'text-red-600'
+                    }`}
+                    aria-live="polite"
+                  >
+                    {formStatus}
+                  </p>
+                )}
 
                 <p className="text-xs text-muted-foreground text-center">
                   En soumettant ce formulaire, vous acceptez d'être recontacté concernant votre projet.
