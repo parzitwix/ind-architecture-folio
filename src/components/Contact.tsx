@@ -212,40 +212,30 @@ const Contact = () => {
                 })}
               </div>
 
-              {/* Map Placeholder */}
-              <Card className="p-6 border-border">
-                <div className="space-y-4">
-                  <h4 className="font-medium">Zone d'intervention</h4>
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                    <div className="text-center space-y-2">
-                      <MapPin size={24} className="text-muted-foreground mx-auto" />
-                      <p className="text-sm text-muted-foreground">
-                        Lyon et région Rhône-Alpes<br />
-                        Projets internationaux acceptés
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      asChild
-                    >
-                      <a 
-                        href="https://www.google.com/maps/place/le+15/@45.7542403,4.7564142,13z/data=!3m1!5s0x47f4ea4d508f79ab:0x8b77bae220f94b01!4m10!1m2!2m1!1sLe+15+!3m6!1s0x47f4eb1f9762db8f:0xa25b8e9ecfccb428!8m2!3d45.7542403!4d4.828512!15sCgVMZSAxNZIBG2Fzc29jaWF0aW9uX29yX29yZ2FuaXphdGlvbqoBORABKgkiBWxlIDE1KAQyHxABIhu2i4HePxHTI9i3gtEDbCdAY2cherCmU8bvegcyCRACIgVsZSAxNeABAA!16s%2Fg%2F11j8j_ydbl"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Voir sur Google Maps
-                      </a>
-                    </Button>
-                  </div>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Intervention principalement sur Lyon métropole et région Rhône-Alpes. 
-                    Déplacements possibles selon le projet.
-                  </p>
+              {/* Map Section */}
+              <section aria-label="Localisation de l'agence">
+                <h3 className="text-xl font-medium mb-6">Nous trouver</h3>
+                <div className="w-full h-[400px] md:h-[300px] relative overflow-hidden rounded-2xl">
+                  <iframe
+                    src="https://www.google.com/maps?q=IND%20Architecture%2C%2015%20Rue%20Jarente%2069002%20Lyon&output=embed"
+                    className="absolute inset-0 w-full h-full border-0"
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    aria-label="Carte Google montrant IND Architecture, 15 Rue Jarente, Lyon"
+                  />
                 </div>
-              </Card>
+                <p className="mt-2 text-center">
+                  <a 
+                    href="https://www.google.com/maps?q=IND%20Architecture%2C%2015%20Rue%20Jarente%2069002%20Lyon" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm text-accent-brand hover:underline"
+                  >
+                    Ouvrir dans Google Maps
+                  </a>
+                </p>
+              </section>
             </div>
           </div>
         </div>
