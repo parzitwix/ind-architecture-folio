@@ -10,6 +10,7 @@ import projet2 from '@/assets/projet-2.jpg';
 import projet3 from '@/assets/projet-3.jpg';
 import saintCyrRenovation from '@/assets/saint-cyr-renovation.jpg';
 import projet5 from '@/assets/projet-5.jpg';
+import alliadeRehabilitation from '@/assets/alliade-rehabilitation.jpg';
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
@@ -71,11 +72,24 @@ const Projects = () => {
       image: projet5,
       surface: "5,200 m²",
       type: "Construction neuve"
+    },
+    {
+      id: 6,
+      title: "Réhabilitation patrimoine",
+      category: "Habitat collectif",
+      location: "Lyon 1er",
+      year: "",
+      description: "Projet de réhabilitation de plusieurs sites d'habitat collectif, intégrant maintenance du patrimoine et suivi complet (base + exécution + OPC). Maître d'ouvrage : Alliade Habitat. Mandataire : IND Architecture.",
+      image: alliadeRehabilitation,
+      surface: "Divers sites",
+      type: "Réhabilitation"
     }
   ];
 
   const filteredProjects = selectedCategory === 'Tous' 
     ? projects 
+    : selectedCategory === 'Rénovation énergétique'
+    ? projects.filter(project => project.category === 'Rénovation énergétique' || project.id === 6)
     : projects.filter(project => project.category === selectedCategory);
 
   return (
