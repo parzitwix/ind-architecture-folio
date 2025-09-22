@@ -11,6 +11,7 @@ import projet3 from '@/assets/projet-3.jpg';
 import saintCyrRenovation from '@/assets/saint-cyr-renovation.jpg';
 import projet5 from '@/assets/projet-5.jpg';
 import alliadeRehabilitation from '@/assets/alliade-rehabilitation.jpg';
+import job40Main from '@/assets/job-40-photo1.jpg';
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
@@ -83,13 +84,24 @@ const Projects = () => {
       image: alliadeRehabilitation,
       surface: "Divers sites",
       type: "Réhabilitation"
+    },
+    {
+      id: 7,
+      title: "Travaux d'amélioration énergétique",
+      category: "Rénovation énergétique",
+      location: "Rue du Doyenné, Lyon 5ème (69)",
+      year: "2024",
+      description: "Rénovation d'un bâtiment ERP - Habitat - Équipement public. Travaux complets incluant réfection toiture, ravalement façade et remplacement des menuiseries. Mission de base + OPC avec architecte mandataire. Partenariat avec GENESE (Économiste).",
+      image: job40Main,
+      surface: "660 m²",
+      type: "Rénovation énergétique"
     }
   ];
 
   const filteredProjects = selectedCategory === 'Tous' 
     ? projects 
     : selectedCategory === 'Rénovation énergétique'
-    ? projects.filter(project => project.category === 'Rénovation énergétique' || project.id === 6)
+    ? projects.filter(project => project.category === 'Rénovation énergétique' || project.id === 6 || project.id === 7)
     : projects.filter(project => project.category === selectedCategory);
 
   return (
