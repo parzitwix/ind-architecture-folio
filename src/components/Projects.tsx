@@ -8,19 +8,19 @@ import { MapPin, Calendar } from 'lucide-react';
 import projet1 from '@/assets/projet-1.jpg';
 import projet2 from '@/assets/projet-2.jpg';
 import projet3 from '@/assets/projet-3.jpg';
-import projet4 from '@/assets/projet-4.jpg';
+import saintCyrRenovation from '@/assets/saint-cyr-renovation.jpg';
 import projet5 from '@/assets/projet-5.jpg';
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   
-  const categories = ['Tous', 'Résidentiel', 'Commercial', 'Industriel', 'Rénovation'];
+  const categories = ['Tous', 'Maison individuelle', 'Habitat collectif', 'Commerce/Industrie', 'Rénovation énergétique'];
   
   const projects = [
     {
       id: 1,
       title: "Habitat Collectif - Promotion Immobilière",
-      category: "Résidentiel",
+      category: "Habitat collectif",
       location: "Gleizé (69)",
       year: "2014",
       description: "Conception d'un ensemble résidentiel moderne intégrant des logements contemporains avec commerces au rez-de-chaussée. Architecture contemporaine avec espaces verts et terrasses privatives.",
@@ -31,7 +31,7 @@ const Projects = () => {
     {
       id: 2,
       title: "Construction Complexe Industriel",
-      category: "Industriel", 
+      category: "Commerce/Industrie", 
       location: "Konya, Turquie",
       year: "2010-2011",
       description: "Construction d'un complexe laiterie et abattoir. Maîtrise d'œuvre complète pour ce projet industriel d'envergure intégrant bâtiments techniques, bureaux et zones de production optimisés.",
@@ -42,7 +42,7 @@ const Projects = () => {
     {
       id: 3,
       title: "Maison Contemporaine",
-      category: "Résidentiel",
+      category: "Maison individuelle",
       location: "Saint-Romain-au-Mont-d'Or (69)",
       year: "2020",
       description: "Maison individuelle contemporaine privée sur terrain en pente. Intégration parfaite dans l'environnement avec bardage bois et grandes ouvertures sur le paysage.",
@@ -53,18 +53,18 @@ const Projects = () => {
     {
       id: 4,
       title: "Rénovation et Extension",
-      category: "Rénovation",
-      location: "La Tour-de-Salvagny (69)",
-      year: "2019", 
+      category: "Rénovation énergétique",
+      location: "Saint-Cyr (69)",
+      year: "2023", 
       description: "Extension et rénovation complète d'une maison existante. Création d'un espace de vie ouvert avec grandes baies vitrées donnant sur le jardin et optimisation des espaces.",
-      image: projet4,
+      image: saintCyrRenovation,
       surface: "97 m²",
       type: "Rénovation/Extension"
     },
     {
       id: 5,
       title: "Construction Centre Multiusage",
-      category: "Commercial",
+      category: "Commerce/Industrie",
       location: "Lyon",
       year: "2017",
       description: "Construction d'un centre multiusage moderne. Architecture innovante avec espaces modulables, technologies intégrées et optimisation des flux de circulation.",

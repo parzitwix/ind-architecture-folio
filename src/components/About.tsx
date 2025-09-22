@@ -17,8 +17,8 @@ const About = () => {
     },
     {
       icon: Globe,
-      title: "Expertise internationale",
-      description: "Connaissance du milieu architectural français et expérience internationale"
+      title: "Rénovation énergétique",
+      description: "Expertise en rénovation énergétique et bâtiments haute performance"
     },
     {
       icon: Award,
@@ -64,7 +64,7 @@ const About = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-medium text-accent-brand">40+</div>
                   <div className="text-sm text-muted-foreground">Projets réalisés</div>
@@ -72,10 +72,6 @@ const About = () => {
                 <div className="text-center">
                   <div className="text-2xl font-medium text-accent-brand">25+</div>
                   <div className="text-sm text-muted-foreground">Années d'expérience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-medium text-accent-brand">97%</div>
-                  <div className="text-sm text-muted-foreground">Projets livrés à temps</div>
                 </div>
               </div>
             </div>
