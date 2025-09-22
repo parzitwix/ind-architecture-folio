@@ -45,28 +45,29 @@ const About = () => {
             <div className="space-y-8">
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">IND Architecture</strong> offre une architecture 
-                  contemporaine et responsable, appliquée dans des domaines variés : commerces, 
-                  centres urbains, complexes industriels, bureaux, équipements collectifs et habitat.
+                  <strong className="text-foreground">Pour un habitat plus sobre : l'architecture frugale et créative</strong>
                 </p>
                 
                 <p>
-                  Notre connaissance du milieu architectural français, alliée à l'expérience 
-                  internationale, fait d'IND Architecture un interlocuteur privilégié pour 
-                  vos projets en France et à l'étranger.
+                  Nous sommes particulièrement sensibles au mouvement de la frugalité heureuse et créative, 
+                  qui s'appuie sur une démarche à la fois sobre, respectueuse de l'environnement et inventive. 
+                  Cette approche repose notamment sur la réduction de l'usage des ressources matérielles 
+                  (sol, énergie, matériaux, ressources naturelles), tout en valorisant l'ingéniosité 
+                  architecturale et constructive.
                 </p>
                 
                 <p>
-                  Nous accordons une grande importance au principe de collaboration, travaillant 
-                  en partenariat avec architectes, architectes d'intérieur, ingénieurs et 
-                  infographistes pour offrir une prestation globale de qualité.
+                  Elle invite à concevoir et à réaliser des projets qui répondent aux besoins réels, 
+                  sans excès ni gaspillage, en privilégiant la simplicité, la durabilité et la qualité d'usage. 
+                  Loin d'être une contrainte, cette sobriété devient un moteur de créativité, en ouvrant la voie 
+                  à des solutions architecturales innovantes, adaptées au contexte et porteuses de sens.
                 </p>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-medium text-accent-brand">40+</div>
+                  <div className="text-2xl font-medium text-accent-brand">60</div>
                   <div className="text-sm text-muted-foreground">Projets réalisés</div>
                 </div>
                 <div className="text-center">
