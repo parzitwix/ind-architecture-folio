@@ -30,6 +30,11 @@ const lyon5Image1 = '/lovable-uploads/lyon5-renovation-1.png';
 const lyon5Image2 = '/lovable-uploads/lyon5-renovation-2.png';
 const lyon5Image3 = '/lovable-uploads/lyon5-renovation-3.png';
 
+// La Tour-du-Pin notarial office project images
+const ltdpImage1 = '/lovable-uploads/ltdp-notaire-1.jpg';
+const ltdpImage2 = '/lovable-uploads/ltdp-notaire-2.jpg';
+const ltdpImage3 = '/lovable-uploads/ltdp-notaire-3.jpg';
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   
@@ -148,13 +153,25 @@ const Projects = () => {
       images: [lyon5Image1, lyon5Image2, lyon5Image3],
       surface: "5 372 m² – 64 lots",
       type: "Rénovation énergétique"
+    },
+    {
+      id: 11,
+      title: "Réhabilitation et extension d'une étude notariale",
+      category: "Commerce/Industrie",
+      location: "La Tour-du-Pin (38)",
+      year: "2016",
+      description: "Réhabilitation et extension d'une étude notariale – La Tour-du-Pin (38). À La Tour-du-Pin, en Isère, IND Architecture a piloté la réhabilitation et l'extension d'un établissement recevant du public (ERP/ERT) afin de moderniser une étude notariale et d'adapter ses espaces aux nouveaux usages. L'objectif principal était de concilier mise aux normes réglementaires, amélioration du confort des usagers et valorisation d'un patrimoine tertiaire. Programme architectural : Extension du bâtiment existant sur 4 niveaux. Création de 900 m² d'espaces fonctionnels et contemporains adaptés à l'accueil du public et au travail collaboratif. Réaménagement complet de l'intérieur avec une attention portée à la fluidité des circulations et à la qualité des ambiances intérieures. Conception intégrant confort thermique, luminosité naturelle et respect des normes ERP. Création d'un cadre de travail moderne et fonctionnel pour les notaires et leurs équipes. Mise en conformité d'un ERP tertiaire accueillant du public. Réhabilitation qui valorise le patrimoine bâti tout en intégrant une extension contemporaine harmonieuse. Exemple de l'expertise de l'agence dans les projets tertiaires et institutionnels.",
+      image: ltdpImage1,
+      images: [ltdpImage1, ltdpImage2, ltdpImage3],
+      surface: "900 m² sur 4 niveaux",
+      type: "Réhabilitation/Extension"
     }
   ];
 
   const filteredProjects = selectedCategory === 'Tous' 
     ? projects 
     : selectedCategory === 'Rénovation énergétique'
-    ? projects.filter(project => project.category === 'Rénovation énergétique' || project.id === 6 || project.id === 7 || project.id === 8)
+    ? projects.filter(project => project.category === 'Rénovation énergétique' || project.id === 6 || project.id === 7 || project.id === 8 || project.id === 11)
     : selectedCategory === 'Maison individuelle'
     ? projects.filter(project => project.category === 'Maison individuelle' || project.id === 4 || project.id === 8)
     : projects.filter(project => project.category === selectedCategory);
