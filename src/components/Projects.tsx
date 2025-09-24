@@ -25,6 +25,11 @@ const mablyImage2 = '/lovable-uploads/8eb6de00-a0b2-4653-8669-3d22b777e33e.png';
 const mablyImage3 = '/lovable-uploads/e172933c-f614-429a-a88f-1e90efcb60af.png';
 const mablyImage4 = '/lovable-uploads/28f24940-b963-41aa-ba02-e629462d5069.png';
 
+// Lyon 5 renovation project images
+const lyon5Image1 = '/lovable-uploads/lyon5-renovation-1.png';
+const lyon5Image2 = '/lovable-uploads/lyon5-renovation-2.png';
+const lyon5Image3 = '/lovable-uploads/lyon5-renovation-3.png';
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   
@@ -131,6 +136,18 @@ const Projects = () => {
       images: [mablyImage1, mablyImage2, mablyImage3, mablyImage4],
       surface: "21 logements / 110 m²",
       type: "Habitat collectif intermédiaire"
+    },
+    {
+      id: 10,
+      title: "Rénovation énergétique de 4 bâtiments collectifs",
+      category: "Rénovation énergétique",
+      location: "Lyon 5e (69)",
+      year: "2025",
+      description: "Rénovation énergétique de 4 bâtiments collectifs – Lyon 5e (69). Sur le boulevard des Castors à Lyon 5, IND Architecture a été mandaté pour un vaste projet de rénovation énergétique et patrimoniale concernant 4 immeubles en copropriété regroupant 64 logements (5 372 m²). L'objectif : améliorer la performance énergétique, moderniser les équipements et revaloriser le cadre de vie des habitants. Programme des travaux : Isolation thermique par l'extérieur (ITE) et ravalement complet des façades. Remplacement des menuiseries et installation de nouveaux garde-corps. Mise à niveau des équipements techniques : remplacement des systèmes de ventilation (VMC) et installation de pompes à chaleur (PAC). Optimisation des performances énergétiques pour répondre aux normes actuelles et réduire les consommations. Amélioration énergétique significative des bâtiments existants. Confort accru pour les résidents grâce à de meilleures performances thermiques et acoustiques. Revalorisation patrimoniale d'un ensemble immobilier au cœur de Lyon 5. Un projet exemplaire en matière de transition énergétique appliquée à l'habitat collectif.",
+      image: lyon5Image1,
+      images: [lyon5Image1, lyon5Image2, lyon5Image3],
+      surface: "5 372 m² – 64 lots",
+      type: "Rénovation énergétique"
     }
   ];
 
