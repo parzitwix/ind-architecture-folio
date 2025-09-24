@@ -13,6 +13,12 @@ import projet5 from '@/assets/projet-5.jpg';
 import alliadeRehabilitation from '@/assets/alliade-rehabilitation.jpg';
 import job40Main from '@/assets/job-40-photo1.jpg';
 
+// RED Is RED project images
+const redIsRedImage1 = '/lovable-uploads/e1097b63-1541-4533-b1ff-147939f833fd.png';
+const redIsRedImage2 = '/lovable-uploads/9d409177-7635-48b3-8391-3ec1a08f185b.png';
+const redIsRedImage3 = '/lovable-uploads/c2d47c59-0114-4879-9451-e828fe246e24.png';
+const redIsRedImage4 = '/lovable-uploads/826d58dd-3aef-4f5c-86ca-57e8f92cce45.png';
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   
@@ -55,8 +61,8 @@ const Projects = () => {
     {
       id: 4,
       title: "Rénovation et Extension",
-      category: "Rénovation énergétique",
-      location: "Saint-Cyr (69)",
+      category: "Maison individuelle",
+      location: "Saint-Cyr au Mont-D'or (69)",
       year: "2023", 
       description: "Extension et rénovation complète d'une maison existante. Création d'un espace de vie ouvert avec grandes baies vitrées donnant sur le jardin et optimisation des espaces.",
       image: saintCyrRenovation,
@@ -78,8 +84,8 @@ const Projects = () => {
       id: 6,
       title: "Réhabilitation patrimoine",
       category: "Habitat collectif",
-      location: "Lyon 1er",
-      year: "",
+      location: "Rue de la l'Annonciade Lyon 1",
+      year: "2023",
       description: "Projet de réhabilitation de plusieurs sites d'habitat collectif, intégrant maintenance du patrimoine et suivi complet (base + exécution + OPC). Maître d'ouvrage : Alliade Habitat. Mandataire : IND Architecture.",
       image: alliadeRehabilitation,
       surface: "Divers sites",
@@ -95,13 +101,27 @@ const Projects = () => {
       image: job40Main,
       surface: "660 m²",
       type: "Rénovation énergétique"
+    },
+    {
+      id: 8,
+      title: "RED Is RED",
+      category: "Maison individuelle",
+      location: "Oullins (69)",
+      year: "2019",
+      description: "Red Is Red – Maison individuelle à Oullins. Surélévation & rénovation énergétique. Située à Oullins, près de Lyon, cette maison a fait l'objet d'une transformation complète : une surélévation pour créer de nouveaux espaces de vie et une rénovation énergétique visant à améliorer le confort et réduire les consommations. Le projet a relevé plusieurs défis : Agrandir la surface habitable sans emprise supplémentaire au sol. Requalifier l'enveloppe thermique grâce à une isolation performante et des menuiseries haute efficacité. Donner une identité architecturale contemporaine avec une façade rouge marquante qui distingue le projet tout en respectant son environnement urbain. L'intervention a permis d'optimiser la lumière naturelle, d'améliorer la ventilation et de créer un dialogue harmonieux entre l'ancien et le neuf. Résultats : Une maison plus spacieuse et confortable. Des performances énergétiques nettement améliorées. Une architecture moderne et identifiable, symbole de rénovation durable en région lyonnaise.",
+      image: redIsRedImage1,
+      images: [redIsRedImage1, redIsRedImage2, redIsRedImage3, redIsRedImage4],
+      surface: "Extension + rénovation",
+      type: "Surélévation & rénovation énergétique"
     }
   ];
 
   const filteredProjects = selectedCategory === 'Tous' 
     ? projects 
     : selectedCategory === 'Rénovation énergétique'
-    ? projects.filter(project => project.category === 'Rénovation énergétique' || project.id === 6 || project.id === 7)
+    ? projects.filter(project => project.category === 'Rénovation énergétique' || project.id === 6 || project.id === 7 || project.id === 8)
+    : selectedCategory === 'Maison individuelle'
+    ? projects.filter(project => project.category === 'Maison individuelle' || project.id === 4 || project.id === 8)
     : projects.filter(project => project.category === selectedCategory);
 
   return (
@@ -187,13 +207,36 @@ const Projects = () => {
                 
                 <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                   <div className="space-y-6">
-                    <div className="aspect-[16/10] overflow-hidden rounded-lg">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                    {project.images && project.images.length > 1 ? (
+                      <div className="space-y-4">
+                        <div className="aspect-[16/10] overflow-hidden rounded-lg">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="grid grid-cols-3 gap-2">
+                          {project.images.slice(1).map((img, index) => (
+                            <div key={index} className="aspect-[4/3] overflow-hidden rounded-lg">
+                              <img
+                                src={img}
+                                alt={`${project.title} - Photo ${index + 2}`}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="aspect-[16/10] overflow-hidden rounded-lg">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    )}
                     
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
