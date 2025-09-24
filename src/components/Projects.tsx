@@ -19,6 +19,12 @@ const redIsRedImage2 = '/lovable-uploads/9d409177-7635-48b3-8391-3ec1a08f185b.pn
 const redIsRedImage3 = '/lovable-uploads/c2d47c59-0114-4879-9451-e828fe246e24.png';
 const redIsRedImage4 = '/lovable-uploads/826d58dd-3aef-4f5c-86ca-57e8f92cce45.png';
 
+// Mably project images  
+const mablyImage1 = '/lovable-uploads/d07ecc8d-3c80-48f2-8212-2b028b688c5a.png';
+const mablyImage2 = '/lovable-uploads/8eb6de00-a0b2-4653-8669-3d22b777e33e.png';
+const mablyImage3 = '/lovable-uploads/e172933c-f614-429a-a88f-1e90efcb60af.png';
+const mablyImage4 = '/lovable-uploads/28f24940-b963-41aa-ba02-e629462d5069.png';
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   
@@ -113,6 +119,18 @@ const Projects = () => {
       images: [redIsRedImage1, redIsRedImage2, redIsRedImage3, redIsRedImage4],
       surface: "Extension + rénovation",
       type: "Surélévation & rénovation énergétique"
+    },
+    {
+      id: 9,
+      title: "Habitat collectif à dimension individuelle",
+      category: "Habitat collectif",
+      location: "Mably / Roanne (42)",
+      year: "2022",
+      description: "21 maisons jumelées à Mably (42). À Mably, dans la Loire (42), IND Architecture a conçu un programme de 21 maisons jumelées. Le projet vise à associer les avantages d'un habitat collectif (densité, optimisation foncière) et ceux de la maison individuelle (intimité, espaces extérieurs). Organisation en bandes jumelées pour optimiser le foncier et les coûts. Chaque logement dispose d'un jardin ou d'une terrasse privatifs. Volumes sobres, matériaux durables, intégration harmonieuse au site. Cadre de vie à échelle humaine conciliant densité et confort. Performance énergétique grâce à la compacité et aux matériaux. Qualité résidentielle durable, pensée pour les familles et le territoire.",
+      image: mablyImage1,
+      images: [mablyImage1, mablyImage2, mablyImage3, mablyImage4],
+      surface: "21 logements / 110 m²",
+      type: "Habitat collectif intermédiaire"
     }
   ];
 

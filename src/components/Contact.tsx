@@ -104,13 +104,13 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email professionnel",
-      value: "contact@ind-architecture.fr",
-      link: "mailto:contact@ind-architecture.fr"
+      value: "dbayirli@indarchitecture.com",
+      link: "mailto:dbayirli@indarchitecture.com"
     },
     {
       icon: MapPin,
       label: "Adresse",
-      value: "16 bis rue du charroi, Saint-Romain-au-Mont-d'Or 69270",
+      value: "IND Architecture, 16bis Rue du Charroi, 69270 Saint-Romain-au-Mont-d'Or",
       link: null
     },
     {
@@ -309,17 +309,17 @@ const Contact = () => {
                 <h3 className="text-xl font-medium mb-6">Nous trouver</h3>
                 <div className="w-full h-[400px] md:h-[300px] relative overflow-hidden rounded-2xl">
                   <iframe
-                    src="https://www.google.com/maps?q=IND%20Architecture%2C%2015%20Rue%20Jarente%2069002%20Lyon&output=embed"
+                    src="https://www.google.com/maps?q=IND%20Architecture%2C%2016bis%20Rue%20du%20Charroi%2C%2069270%20Saint-Romain-au-Mont-d%27Or&output=embed"
                     className="absolute inset-0 w-full h-full border-0"
                     loading="lazy"
                     allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
-                    aria-label="Carte Google montrant IND Architecture, 15 Rue Jarente, Lyon"
+                    aria-label="Carte Google montrant IND Architecture, 16bis Rue du Charroi, Saint-Romain-au-Mont-d'Or"
                   />
                 </div>
                 <p className="mt-2 text-center">
                   <a 
-                    href="https://www.google.com/maps?q=IND%20Architecture%2C%2015%20Rue%20Jarente%2069002%20Lyon" 
+                    href="https://www.google.com/maps?q=IND%20Architecture%2C%2016bis%20Rue%20du%20Charroi%2C%2069270%20Saint-Romain-au-Mont-d%27Or" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-sm text-accent-brand hover:underline"
