@@ -26,9 +26,9 @@ const mablyImage3 = '/lovable-uploads/e172933c-f614-429a-a88f-1e90efcb60af.png';
 const mablyImage4 = '/lovable-uploads/28f24940-b963-41aa-ba02-e629462d5069.png';
 
 // Lyon 5 renovation project images
-const lyon5Image1 = '/lovable-uploads/lyon5-renovation-1.png';
-const lyon5Image2 = '/lovable-uploads/lyon5-renovation-2.png';
-const lyon5Image3 = '/lovable-uploads/lyon5-renovation-3.png';
+const lyon5Image1 = '/lovable-uploads/lyon5-renovation-1.jpg';
+const lyon5Image2 = '/lovable-uploads/lyon5-renovation-2.jpg';
+const lyon5Image3 = '/lovable-uploads/lyon5-renovation-3.jpg';
 
 // La Tour-du-Pin notarial office project images
 const ltdpImage1 = '/lovable-uploads/ltdp-notaire-1.jpg';
