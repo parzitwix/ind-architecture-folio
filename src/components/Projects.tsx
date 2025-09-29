@@ -35,6 +35,10 @@ const ltdpImage1 = '/lovable-uploads/ltdp-notaire-1.jpg';
 const ltdpImage2 = '/lovable-uploads/ltdp-notaire-2.jpg';
 const ltdpImage3 = '/lovable-uploads/ltdp-notaire-3.jpg';
 
+// Job 40 (Travaux d'amélioration énergétique) project images
+const job40Image1 = '/lovable-uploads/job40-photo1.jpg';
+const job40Image2 = '/lovable-uploads/job40-photo2.jpg';
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   
@@ -114,7 +118,8 @@ const Projects = () => {
       location: "Rue du Doyenné, Lyon 5ème (69)",
       year: "2024",
       description: "Rénovation d'un bâtiment ERP - Habitat - Équipement public. Travaux complets incluant réfection toiture, ravalement façade et remplacement des menuiseries. Mission de base + OPC avec architecte mandataire. Partenariat avec GENESE (Économiste).",
-      image: job40Main,
+      image: job40Image2,
+      images: [job40Image2, job40Main],
       surface: "660 m²",
       type: "Rénovation énergétique"
     },
