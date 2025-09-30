@@ -33,10 +33,9 @@ const About = () => {
         <div className="space-y-16">
           {/* Header */}
           <div className="text-center space-y-6">
-            
             <h2 className="text-3xl md:text-4xl font-light text-balance">
-              Architecture franche, contemporaine
-              <span className="block font-medium">fonctionnelle & responsable</span>
+              Architecte à Lyon & Rhône (69)
+              <span className="block font-medium">Architecture franche, contemporaine & responsable</span>
             </h2>
           </div>
 
@@ -85,7 +84,7 @@ const About = () => {
                     <div className="w-20 h-20 rounded-full overflow-hidden">
                       <img
                         src={denizPhoto}
-                        alt="Déniz Bayirli - Architecte DPLG"
+                        alt="Portrait de Déniz Bayirli, Architecte DPLG à Lyon spécialisé en rénovation énergétique et construction de maisons individuelles"
                         className="w-full h-full object-cover"
                       />
                     </div>

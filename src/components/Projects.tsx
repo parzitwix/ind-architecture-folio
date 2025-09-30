@@ -203,10 +203,9 @@ const Projects = () => {
         <div className="space-y-12">
           {/* Header */}
           <div className="text-center space-y-6">
-            
             <h2 className="text-3xl md:text-4xl font-light text-balance">
-              Projets réalisés avec 
-              <span className="block font-medium">expertise et passion</span>
+              Réalisations Lyon & Rhône (69)
+              <span className="block font-medium">Plus de 60 projets avec expertise et passion</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
               De la maison individuelle aux complexes industriels, découvrez nos réalisations 
@@ -241,7 +240,7 @@ const Projects = () => {
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={project.image}
-                        alt={project.title}
+                        alt={`${project.title} - Projet d'architecture ${project.type} à ${project.location} par IND Architecture`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
                       />
                     </div>
@@ -285,7 +284,7 @@ const Projects = () => {
                         <div className="aspect-[16/10] overflow-hidden rounded-lg">
                           <img
                             src={project.image}
-                            alt={project.title}
+                            alt={`${project.title} - Vue principale du projet ${project.type} à ${project.location} réalisé par IND Architecture`}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -294,7 +293,7 @@ const Projects = () => {
                             <div key={index} className="aspect-[4/3] overflow-hidden rounded-lg">
                               <img
                                 src={img}
-                                alt={`${project.title} - Photo ${index + 2}`}
+                                alt={`${project.title} à ${project.location} - Vue complémentaire ${index + 2} du projet de ${project.type}`}
                                 className="w-full h-full object-cover"
                               />
                             </div>
@@ -305,7 +304,7 @@ const Projects = () => {
                       <div className="aspect-[16/10] overflow-hidden rounded-lg">
                         <img
                           src={project.image}
-                          alt={project.title}
+                          alt={`${project.title} - Projet ${project.type} à ${project.location} par IND Architecture`}
                           className="w-full h-full object-cover"
                         />
                       </div>

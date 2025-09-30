@@ -10,6 +10,8 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${maisonModerne})` }}
+        role="img"
+        aria-label="Maison contemporaine conçue par IND Architecture dans le Rhône"
       >
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
@@ -21,14 +23,14 @@ const Hero = () => {
             <div className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-balance leading-tight text-white">
-                  Architecture 
-                  <span className="block font-medium">contemporaine</span>
-                  <span className="block text-accent-brand">& responsable</span>
+                  Architecte DPLG Lyon & Rhône
+                  <span className="block font-medium">Construction & Rénovation</span>
+                  <span className="block text-accent-brand">Architecture responsable</span>
                 </h1>
                 
                 <p className="text-xl md:text-2xl text-white/90 max-w-3xl text-balance leading-relaxed">
-                  IND Architecture offre une architecture franche, contemporaine, fonctionnelle 
-                  et responsable pour vos projets résidentiels, commerciaux et industriels.
+                  Expert en construction de maisons individuelles, rénovation énergétique et extension 
+                  à Lyon et dans le Rhône. Architecture contemporaine, fonctionnelle et durable depuis plus de 25 ans.
                 </p>
               </div>
 

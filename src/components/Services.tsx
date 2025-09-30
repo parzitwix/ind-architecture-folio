@@ -55,10 +55,9 @@ const Services = () => {
         <div className="space-y-12">
           {/* Header */}
           <div className="text-center space-y-6">
-            
             <h2 className="text-3xl md:text-4xl font-light text-balance">
-              Un accompagnement
-              <span className="block font-medium">sur-mesure</span>
+              Nos services d'architecture à Lyon
+              <span className="block font-medium">Accompagnement sur-mesure de A à Z</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
               De la première esquisse à la réception des travaux, nous vous offrons 
