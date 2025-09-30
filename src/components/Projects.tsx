@@ -39,6 +39,10 @@ const ltdpImage3 = '/lovable-uploads/ltdp-notaire-3.jpg';
 const job40Image1 = '/lovable-uploads/job40-photo1.jpg';
 const job40Image2 = '/lovable-uploads/job40-photo2.jpg';
 
+// The Very Cube project images
+const veryCubeImage1 = '/lovable-uploads/the-very-cube-1.jpg';
+const veryCubeImage2 = '/lovable-uploads/the-very-cube-2.jpg';
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   
@@ -170,6 +174,18 @@ const Projects = () => {
       images: [ltdpImage1, ltdpImage2, ltdpImage3],
       surface: "900 m² sur 4 niveaux",
       type: "Réhabilitation/Extension"
+    },
+    {
+      id: 12,
+      title: "The Very Cube",
+      category: "Rénovation énergétique",
+      location: "Saint-Romain-au-Mont-d'Or (69)",
+      year: "2014",
+      description: "The Very Cube – Extension contemporaine d'une maison individuelle à Saint-Romain-au-Mont-d'Or (69). Ce projet d'extension en bardage bois et zinc illustre la recherche d'excellence énergétique et d'intégration harmonieuse avec l'existant. Une composition murale optimale associant bardage bois Douglas, béton cellulaire et laine de roche offre une isolation au-delà des exigences RT 2012 et BBC. La couverture en zinc crée un contraste architectural assumé avec l'existant, soulignant le caractère contemporain de l'intervention. Le bardage bois en Douglas apporte chaleur et naturel tout en garantissant durabilité et performance. L'installation d'un plancher chauffant offre de multiples possibilités d'aménagement intérieur et un confort optimal. « The Very Cube » allie contemporanéité et atmosphère cosy, créant un espace de vie lumineux et performant. Performance énergétique exemplaire dépassant les standards réglementaires. Extension contemporaine en parfaite harmonie avec l'architecture existante. Confort thermique optimal grâce à une isolation performante et un plancher chauffant. Matériaux nobles et durables pour une architecture intemporelle.",
+      image: veryCubeImage1,
+      images: [veryCubeImage1, veryCubeImage2],
+      surface: "50 m²",
+      type: "Extension & rénovation énergétique"
     }
   ];
 
