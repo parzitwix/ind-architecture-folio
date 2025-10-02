@@ -109,7 +109,7 @@ const Services = () => {
               <div className="text-center sm:text-left">
                 <h3 className="font-medium mb-1">Un projet en tête ?</h3>
                 <p className="text-sm text-muted-foreground">
-                  Discutons de vos besoins lors d'un premier rendez-vous gratuit.
+                  Discutons de vos besoins architecturaux.
                 </p>
               </div>
               <a

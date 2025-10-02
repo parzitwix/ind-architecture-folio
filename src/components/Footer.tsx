@@ -97,7 +97,7 @@ const Footer = () => {
             <h3 className="font-medium">Votre projet</h3>
             <div className="space-y-4">
               <p className="text-sm text-primary-foreground/80">
-                Premier rendez-vous gratuit pour étudier votre projet.
+                Parlons de votre projet architectural dans le Rhône.
               </p>
               <a
                 href="#contact"

@@ -129,11 +129,11 @@ const Contact = () => {
           <div className="text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-light text-balance">
               Contactez votre architecte à Lyon
-              <span className="block font-medium">Premier rendez-vous gratuit</span>
+              <span className="block font-medium">pour votre projet</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-              Premier rendez-vous gratuit pour étudier la faisabilité de votre projet 
-              et vous conseiller sur les meilleures solutions.
+              Nous étudions la faisabilité de votre projet 
+              et vous conseillons sur les meilleures solutions.
             </p>
           </div>
 
