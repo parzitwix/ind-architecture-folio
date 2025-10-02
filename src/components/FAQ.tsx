@@ -16,10 +16,6 @@ const FAQ = () => {
       answer: "IND Architecture intervient sur tous types de projets architecturaux dans le Rhône : construction de maisons individuelles, rénovation énergétique de bâtiments collectifs et individuels, extension et surélévation de maisons, projets commerciaux et industriels, réhabilitation de patrimoine. Nous accompagnons particuliers, promoteurs et collectivités à Lyon, Saint-Romain-au-Mont-d'Or, Saint-Cyr-au-Mont-d'Or, Oullins et dans tout le département du Rhône."
     },
     {
-      question: "Combien coûte une mission d'architecte pour une maison individuelle ?",
-      answer: "Les honoraires d'architecte varient selon la complexité du projet, la surface et les prestations souhaitées. Pour une maison individuelle, comptez généralement entre 8% et 12% du montant des travaux pour une mission complète (conception, dépôt de permis de construire, suivi de chantier). Nous proposons un premier rendez-vous gratuit pour évaluer vos besoins et vous fournir un devis personnalisé adapté à votre projet dans le Rhône."
-    },
-    {
       question: "Intervenez-vous sur les projets de rénovation énergétique à Lyon ?",
       answer: "Oui, la rénovation énergétique est l'une de nos spécialités. Formé aux normes RE 2020 et à la rénovation énergétique, nous réalisons des projets d'isolation thermique par l'extérieur (ITE), remplacement de menuiseries, installation de systèmes performants (pompes à chaleur, VMC) et mise en conformité BBC. Nous intervenons sur des maisons individuelles et des bâtiments collectifs à Lyon 5, Lyon 1 et dans tout le Rhône pour améliorer votre confort et réduire vos factures énergétiques."
     },
@@ -91,7 +87,7 @@ const FAQ = () => {
               href="#contact"
               className="inline-flex items-center justify-center bg-accent-brand hover:bg-accent-brand/90 text-accent-brand-foreground px-8 py-3 rounded-md font-medium transition-smooth"
             >
-              Prendre rendez-vous gratuitement
+              Nous contacter
             </a>
           </div>
         </div>
