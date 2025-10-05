@@ -42,9 +42,10 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-start">
             {/* Content */}
             <div className="space-y-8">
+              <h3 className="text-xl font-medium">L'architecture frugale et créative</h3>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  <strong className="text-foreground">Pour un habitat plus sobre : l'architecture frugale et créative</strong>
+                  <strong className="text-foreground">Pour un habitat plus sobre</strong>
                 </p>
                 
                 <p>
@@ -78,6 +79,7 @@ const About = () => {
 
             {/* Architect Profile */}
             <div className="space-y-6">
+              <h3 className="text-xl font-medium">Votre architecte DPLG</h3>
               <Card className="p-6 border-border">
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
@@ -89,7 +91,7 @@ const About = () => {
                       />
                     </div>
                     <div>
-                      <h3 className="font-medium text-lg">Déniz Bayirli</h3>
+                      <h4 className="font-medium text-lg">Déniz Bayirli</h4>
                       <p className="text-sm text-muted-foreground">Architecte DPLG</p>
                       <p className="text-xs text-muted-foreground">N° Ordre : 079943</p>
                     </div>
@@ -129,7 +131,7 @@ const About = () => {
                       <IconComponent size={24} className="text-accent-brand" />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="font-medium">{value.title}</h3>
+                      <h4 className="font-medium">{value.title}</h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">
                         {value.description}
                       </p>
