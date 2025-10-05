@@ -16,8 +16,8 @@ import job40Main from '@/assets/job-40-photo1.jpg';
 // RED Is RED project images
 const redIsRedImage1 = '/lovable-uploads/e1097b63-1541-4533-b1ff-147939f833fd.png';
 const redIsRedImage2 = '/lovable-uploads/9d409177-7635-48b3-8391-3ec1a08f185b.png';
-const redIsRedImage3 = '/lovable-uploads/c2d47c59-0114-4879-9451-e828fe246e24.png';
-const redIsRedImage4 = '/lovable-uploads/826d58dd-3aef-4f5c-86ca-57e8f92cce45.png';
+const redIsRedImage3 = '/lovable-uploads/red-is-red-avant.jpg';
+const redIsRedImage4 = '/lovable-uploads/red-is-red-apres.jpg';
 
 // Mably project images  
 const mablyImage1 = '/lovable-uploads/d07ecc8d-3c80-48f2-8212-2b028b688c5a.png';
