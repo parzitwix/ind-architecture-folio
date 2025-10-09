@@ -7,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { label: 'Accueil', href: '#accueil' },
+    { label: 'Accueil', href: '/' },
     { label: 'À propos', href: '#apropos' },
     { label: 'Réalisations', href: '#realisations' },
     { label: 'Services', href: '#services' },
@@ -19,7 +19,7 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border z-50">
       <nav className="container mx-auto container-padding py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#accueil" className="flex items-center transition-smooth hover:opacity-80">
+        <a href="/" className="flex items-center transition-smooth hover:opacity-80">
           <img 
             src={logoInd} 
             alt="IND Architecture" 
